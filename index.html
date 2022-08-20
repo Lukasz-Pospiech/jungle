@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Lukasz Pospiech" />
+    <meta name="description"
+        content="My first website, a mere byproduct of playing around with the code." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wannabe web dev</title>
+    <!-- <link rel="icon" href="jok.png" type="image/x-icon" /> -->
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="http://fonts.cdnfonts.com/css/lets-coffee" rel="stylesheet">
+    <link href="http://fonts.cdnfonts.com/css/playsir" rel="stylesheet">
+    <link href="http://fonts.cdnfonts.com/css/chizz" rel="stylesheet">
+</head>
+
+<body onload="checkOrientation()">
+    <div id="wrongOrientationWarningDIV">
+        <img id="morpheus" src="morpheus3.jpeg" alt="morpheus">
+        <img id="phoneRotate" src="phoneRotate.gif" alt="phone">
+    </div>
+
+    <div id="facesContainer">
+        <img id="bigFace" src="face.gif" alt="face">
+    </div>
+    <img id="smallFace" src="face.png" alt="face" onclick="dropBigFace()">
+
+    <div id="container">
+        <img id="jungleJPG" src="jungle.jpg" alt="jungle">
+        <img id="chameleon" src="chameleon.gif" alt="chameleon">
+        <img id="cockroachGIF" class="cockroachAnimation" src="cockroach.gif" alt="cockroach">
+        <img id="mosquitoGIF" src="mosquito.gif" alt="mosquito">
+        <img id="cheetahGIF" src="cheetah.gif" alt="cheetah">
+        <div id="laptopContainer">
+            <img id="laptopPic" src="laptopPic.jpg" alt="laptop"> 
+            <div id="laptopScreen" onclick="typeWriterEffect()">Tap here!</div>
+        </div>    
+        <img id="bird" src="bird.gif">
+        <img id="butterfly" src="butterfly.gif">
+        <img id="winnie" src="winnie.png">
+        <img id="lizard" src="lizard.gif">
+        <img id="crockodile" src="crockodile.gif">
+        <img id="snake" src="snake.gif">
+        <img id="tiger" src="tiger.gif">
+        <img id="monkey" src="monkey.png">
+        <img id="travolta" src="travolta.gif">
+    </div>
+
+    <div id="radioContainer">
+            <div id="fliersDIV">
+                <label for="bird">Bird<input type="radio" id="birdRADIO" name="fliers" class="bigRadioButton"></label>
+                <label for="butterfly">Butterfly<input type="radio" id="butterflyRADIO" name="fliers" class="bigRadioButton"></label>
+                <label for="winnie">Winnie<input type="radio" id="winnieRADIO" name="fliers" class="bigRadioButton"></label>
+            </div>
+            <div id="crawlersDIV">
+                <label for="lizard">Lizard<input type="radio" id="lizardRADIO" name="crawlers" class="bigRadioButton"></label>
+                <label for="crockodile">Crockodile<input type="radio" id="crockodileRADIO" name="crawlers" class="bigRadioButton"></label>
+                <label for="snake">Snake<input type="radio" id="snakeRADIO" name="crawlers" class="bigRadioButton"></label>
+            </div>
+            <div id="walkersDIV">
+                <label for="tiger">Tiger<input type="radio" id="tigerRADIO" name="walkers" class="bigRadioButton"></label>
+                <label for="monkey">Monkey<input type="radio" id="monkeyRADIO" name="walkers" class="bigRadioButton"></label> 
+                <label for="travolta">Travolta<input type="radio" id="travoltaRADIO" name="walkers" class="bigRadioButton"></label> 
+            </div>    
+    </div>
+    <div id="woodenLogDIV" onclick="populateJungle()"></div>
+    <div id="repopulateLogDIV" onclick="showBoardsHideRepopulate()"></div>
+
+</body>
+
+</html>
+

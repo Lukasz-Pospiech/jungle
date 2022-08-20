@@ -1,0 +1,602 @@
+/* WHEN USER ROTATES PHONE SCREEN TO HORIZONTAL, HE GETS A WARNING */
+#wrongOrientationWarningDIV {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: calc(var(--vh, 1vh) * 100);
+    z-index: 500; 
+    background-color: black;
+    text-align: center;
+}
+
+#morpheus {
+    position: absolute;
+    top: calc(var(--vh, 1vh) * 10);;
+    left: 20vw;
+    width: 60vw;
+    height: calc(var(--vh, 1vh) * 80);
+    opacity: 1; 
+    transition: opacity 1s;
+}
+
+#phoneRotate {
+    position: absolute;
+    top: calc(var(--vh, 1vh) * 10);;
+    left: 30vw;
+    width: 40vw;
+    height: calc(var(--vh, 1vh) * 80);
+    opacity: 0; 
+    transition: opacity 1s;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: calc(var(--vh, 1vh) * 100);
+}
+
+body {
+    background-color: black;
+    margin: 0;
+    height: calc(var(--vh, 1vh) * 100);
+}
+
+#smallFace {
+    position: fixed;
+    height: calc(var(--vh, 1vh) * 8);
+    top: 1vw;
+    right: 1vw;
+    z-index: 300;
+}
+
+#facesContainer {
+    position: fixed;
+    width: 100vw;
+    height: calc(var(--vh, 1vh) * 100);
+    background-color: black;
+    text-align: center;
+    z-index: 250;
+    visibility: hidden; 
+    overflow: clip;
+    opacity: 0;
+    transition: opacity 0.3s;
+} 
+
+#bigFace {
+    position: absolute;
+    top: calc(var(--vh, 1vh) * -100);
+    left: 1vw;
+    width: 98vw;
+    visibility: visible; 
+    opacity: 1;
+}
+
+.bigFaceAnimation {
+    animation-name: bigFaceFallsDown;
+    animation-duration: 0.4s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes bigFaceFallsDown {
+    0% {
+        top: calc(var(--vh, 1vh) * -100);
+        left: 1vw;
+    }
+    100% {
+        top: calc(var(--vh, 1vh) * 6);
+        left: 1vw;
+    }
+} 
+
+#container {
+    width: 100vw;
+    height: calc(var(--vh, 1vh) * 100);
+    background-color: rgb(118, 163, 163);
+    overflow: clip;
+    position: absolute;
+}
+
+#jungleJPG {
+    position: absolute;
+    width: 100vw;
+    height: calc(var(--vh, 1vh) * 100);
+}
+
+
+/* CHAMELEON */
+#chameleon {
+    position: absolute;
+    width: 100%;
+    top: 0; 
+    left: 0; 
+    transition: top 15s;
+}
+
+
+/* COCKROACH*/
+#cockroachGIF {
+    position: absolute;
+    width: 40vw;
+    bottom: -50vw;
+    left: -15vw;
+    rotate: 90deg;
+    transition: opacity 3s;
+    /* transition: animation-duration 4s;  */
+    /* transition: bottom 15s; */
+} 
+
+.cockroachAnimation {
+    animation-name: cockroachWalks;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+
+@keyframes cockroachWalks {
+    0% {
+        bottom: -50vw;
+        left: -15vw;
+    }
+    100% {
+        bottom: 220vw;
+        left: -15vw;
+    }
+}  
+
+.cockroachFrozen {
+    animation-name: cockroachStop;
+    animation-duration: 8s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes cockroachStop {
+    0% {
+        bottom: -50vw;
+        left: -15vw;
+    }
+    100% {
+        bottom: 50vw;
+        left: -15vw;
+    }
+}  
+
+
+/* MOSQUITO */
+#mosquitoGIF {
+    position: absolute;
+    width: 20vw;
+    top: calc(var(--vh, 1vh) * 100);
+    left: 130vw;
+    overflow: clip;
+    /* transition: animation-duration 4s;  */
+    /* transition: bottom 15s; */
+    z-index: 100;
+} 
+
+.mosquitoAnimation {
+    animation-name: mosquitoFlies;
+    animation-duration: 12s;
+    animation-iteration-count: 2;
+    animation-timing-function: ease-out;
+}
+
+@keyframes mosquitoFlies {
+    0% {
+        top: calc(var(--vh, 1vh) * 100);
+        left: 130vw;
+    }
+    30% {
+        top: calc(var(--vh, 1vh) * 90);
+        left: 90vw;
+    }
+    80% {
+        top: calc(var(--vh, 1vh) * 70);
+        left: 40vw;
+    }
+    100% {
+        top: calc(var(--vh, 1vh) * 50);
+        left: -30vw;
+    }
+}  
+
+
+/* CHEETAH */
+#cheetahGIF {
+    position: fixed;
+    width: 60vw;
+    bottom: calc(var(--vh, 1vh) * -40);
+    left: 40vw;
+    overflow: clip;
+    /* transition: animation-duration 4s;  */
+    /* transition: bottom 15s; */
+    z-index: 120;
+} 
+
+.cheetahAnimation {
+    animation-name: cheetahShowsup;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes cheetahShowsup {
+    0% {
+        left: 40vw;
+        bottom: calc(var(--vh, 1vh) * -40);
+    }
+    100% {
+        left: 40vw;
+        bottom: 0;
+    }
+}  
+
+
+/* LAPTOP */
+#laptopContainer {
+    position: absolute;
+    bottom: 1vw;
+    right: 1vw;
+    width: 60vw;
+    height: 56vw;
+    background-color: black;
+    border: 1vw solid black;
+    border-radius: 5%;
+    overflow: clip;
+}
+
+#laptopPic {
+    position: absolute;
+    width: 59vw;
+    height: 55vw;
+    border: 1vw solid black;
+    border-radius: 5%;
+    overflow: clip;
+}
+
+#laptopGif {
+    position: absolute;
+    width: 59vw;
+    height: 55vw;
+    border: 1vw solid black;
+    border-radius: 5%;
+    overflow: clip;
+}
+
+#laptopScreen {
+    position: absolute;
+    top: 5vw;
+    left: 3.5vw;
+    width: 52vw;
+    height: 28vw;
+    background-color: #ede1d1;
+    padding: 1vw;
+    color: black;
+    font-size: 3.5vw;
+    font-family: 'Roboto', monospace;
+    text-align: left;
+} 
+
+#laptopScreenEmpty {
+    position: absolute;
+    top: 5vw;
+    left: 3.5vw;
+    width: 52vw;
+    height: 28vw;
+    background-color: #ede1d1;
+    padding: 1vw;
+    color: black;
+    font-size: 3.5vw;
+    font-family: 'Roboto', monospace;
+    text-align: left;
+}
+
+#empty {
+    position: absolute;
+    top: 5vw;
+    left: 3.5vw;
+    width: 52vw;
+    height: 28vw;
+    background-color: #ede1d1;
+    padding: 1vw;
+    color: black;
+    font-size: 3.5vw;
+    font-family: 'Roboto', monospace;
+    text-align: left;
+}
+
+
+/* RADIO */
+#radioContainer {
+    position: fixed;
+    background-image: url("board.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: calc(var(--vh, 1vh) * 100);
+    bottom: calc(var(--vh, 1vh) * 110);
+    z-index: 150;
+}
+
+.radioContainerAnimation {
+    animation-name: radioShow;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes radioShow {
+    0% {
+        bottom: calc(var(--vh, 1vh) * 110);
+    }
+    100% {
+        bottom: 0;
+    }
+}  
+
+#fliersDIV {
+    font-size: 4vw;
+    color: black;
+    font-family: 'Lets Coffee', sans-serif;
+    position: absolute;
+    top: 30%;
+    left: 20%;
+}
+
+#crawlersDIV {
+    font-size: 4vw;
+    color: black;
+    font-family: 'Lets Coffee', sans-serif;
+    position: absolute;
+    top: 47%;
+    left: 20%;
+}
+
+#walkersDIV {
+    font-size: 4vw;
+    color: black;
+    font-family: 'Lets Coffee', sans-serif;
+    position: absolute;
+    top: 63%;
+    left: 20%;
+}
+
+.bigRadioButton {
+    width: 3vw;
+    height: 3vw;
+    margin-right: 2vw;
+    accent-color: yellow;
+}
+
+#woodenLogDIV {
+    position: fixed;
+    background-image: url("buttonLog.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 160;
+    width: 60vw;
+    height: calc(var(--vh, 1vh) * 30);
+    left: 20vw;
+    top: calc(var(--vh, 1vh) * 130);
+}
+
+.woodenLogDIVAnimation {
+    animation-name: woodenLogShow;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes woodenLogShow {
+    0% {
+        top: calc(var(--vh, 1vh) * 130);
+    }
+    100% {
+        top: calc(var(--vh, 1vh) * 70);
+    }
+} 
+
+#repopulateLogDIV {
+    display: none;
+    position: fixed;
+    background-image: url("repopulateLog.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 170;
+    width: 35vw;
+    height: calc(var(--vh, 1vh) * 20);
+    left: 5vw;
+    top: calc(var(--vh, 1vh) * 86);
+}
+
+
+/* ANIMALS TO POPULATE THE JUNGLE */
+#bird {
+    display: none;
+    position: fixed;
+    width: 40vw;
+    bottom: calc(var(--vh, 1vh) * 50);
+    left: -50vw;
+    z-index: 140;
+} 
+
+.birdAnimation {
+    animation-name: birdFlies;
+    animation-duration: 8s;
+    animation-iteration-count: 3;
+    animation-timing-function: ease-out;
+}
+
+@keyframes birdFlies {
+    0% {
+        bottom: calc(var(--vh, 1vh) * 50);
+        left: -50vw;
+    }
+    100% {
+        bottom: calc(var(--vh, 1vh) * 70);
+        left: 150vw;
+    }
+}  
+
+
+#butterfly {
+    display: none;
+    position: fixed;
+    width: 40vw;
+    bottom: calc(var(--vh, 1vh) * 30);
+    left: -50vw;
+    z-index: 140;
+} 
+
+.butterflyAnimation {
+    animation-name: butterflyFlies;
+    animation-duration: 9s;
+    animation-iteration-count: 3;
+    animation-timing-function: ease-out;
+}
+
+@keyframes butterflyFlies {
+    0% {
+        bottom: calc(var(--vh, 1vh) * 30);
+        left: -50vw;
+    }
+    100% {
+        bottom: calc(var(--vh, 1vh) * 80);
+        left: 150vw;
+    }
+}  
+
+
+#winnie {
+    display: none;
+    position: fixed;
+    width: 40vw;
+    bottom: 200vw;
+    left: 40vw;
+    z-index: 140;
+} 
+
+.winnieAnimation {
+    animation-name: winnieFlies;
+    animation-duration: 10s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+}
+
+@keyframes winnieFlies {
+    0% {
+        bottom: 200vw;
+        left: 40vw;
+    }
+    100% {
+        bottom: -100vw;
+        left: 60vw;
+    }
+}  
+
+
+#lizard {
+    display: none;
+    position: fixed;
+    width: 28vw;
+    bottom: 30vw;
+    left: 20vw;
+    z-index: 127;
+} 
+
+#crockodile {
+    display: none;
+    position: fixed;
+    width: 32vw;
+    bottom: 23vw;
+    left: 21vw;
+    z-index: 130;
+    rotate: 35deg;
+} 
+
+#snake {
+    display: none;
+    position: fixed;
+    width: 30vw;
+    bottom: calc(var(--vh, 1vh) * 12);
+    left: 20vw;
+    z-index: 130;
+} 
+
+
+#tiger {
+    display: none;
+    position: fixed;
+    width: 35vw;
+    bottom: 30vw;
+    left: -50vw;
+    z-index: 128;
+} 
+
+.tigerAnimation {
+    animation-name: tigerWalks;
+    animation-duration: 8s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes tigerWalks {
+    0% {
+        bottom: 30vw;
+        left: -50vw;
+    }
+    100% {
+        bottom: 30vw;
+        left: 150vw;
+    }
+}
+
+
+#monkey {
+    display: none;
+    position: fixed;
+    width: 30vw;
+    top: -150vw;
+    left: 0;
+    z-index: 135;
+} 
+
+.monkeyAnimation {
+    animation-name: monkeyWalks;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes monkeyWalks {
+    0% {
+        top: -150vw;
+        left: 0;
+    }
+    100% {
+        top: 0vw;
+        left: 0;
+    }
+}
+
+
+#travolta {
+    display: none;
+    position: fixed;
+    width: 30vw;
+    bottom: 50vw;
+    left: 70vw;
+    z-index: 135;
+} 
