@@ -116,7 +116,7 @@ function typeWriterEffect() {
               setTimeout(typeWriter, 100);
             } 
         })();
-        setTimeout(freezeHands, (text.length*100 + 1000));
+        setTimeout(freezeHands, (text.length*100 + 500));
         function freezeHands() {
             lapContainer.innerHTML = pic + `<div id="laptopScreen">${text}</div>`;
         }
