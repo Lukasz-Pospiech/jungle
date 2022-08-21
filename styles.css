@@ -212,7 +212,7 @@ body {
 /* CHEETAH */
 #cheetahGIF {
     position: fixed;
-    width: 60vw;
+    width: 70vw;
     bottom: calc(var(--vh, 1vh) * -40);
     left: 40vw;
     overflow: clip;
@@ -223,7 +223,7 @@ body {
 
 .cheetahAnimation {
     animation-name: cheetahShowsup;
-    animation-duration: 4s;
+    animation-duration: 1.5s;
     animation-iteration-count: 1;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
@@ -314,6 +314,12 @@ body {
     text-align: left;
 }
 
+#tapHere {
+    display: inline-block;
+    margin-left: 10vw;
+    margin-top: 9vw;
+    font-size: 6vw;
+}
 
 /* RADIO */
 #radioContainer {
@@ -329,7 +335,7 @@ body {
 
 .radioContainerAnimation {
     animation-name: radioShow;
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-iteration-count: 1;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
@@ -345,35 +351,38 @@ body {
 }  
 
 #fliersDIV {
-    font-size: 4vw;
+    font-size: 5vw;
     color: black;
-    font-family: 'Lets Coffee', sans-serif;
+    font-family: 'Trebuchet MS';
+    font-weight: bold;
     position: absolute;
-    top: 30%;
-    left: 20%;
+    top: calc(var(--vh, 1vh) * 30);
+    left: 14vw;
 }
 
 #crawlersDIV {
-    font-size: 4vw;
+    font-size: 5vw;
     color: black;
-    font-family: 'Lets Coffee', sans-serif;
+    font-family: 'Trebuchet MS';
+    font-weight: bold;
     position: absolute;
-    top: 47%;
-    left: 20%;
+    top: calc(var(--vh, 1vh) * 47);
+    left: 14vw;
 }
 
 #walkersDIV {
-    font-size: 4vw;
+    font-size: 5vw;
     color: black;
-    font-family: 'Lets Coffee', sans-serif;
+    font-family: 'Trebuchet MS';
+    font-weight: bold;
     position: absolute;
-    top: 63%;
-    left: 20%;
+    top: calc(var(--vh, 1vh) * 62);
+    left: 14vw;
 }
 
 .bigRadioButton {
-    width: 3vw;
-    height: 3vw;
+    width: 4vw;
+    height: 4vw;
     margin-right: 2vw;
     accent-color: yellow;
 }
@@ -384,15 +393,15 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     z-index: 160;
-    width: 60vw;
-    height: calc(var(--vh, 1vh) * 30);
-    left: 20vw;
+    width: 80vw;
+    height: calc(var(--vh, 1vh) * 35);
+    left: 10vw;
     top: calc(var(--vh, 1vh) * 130);
 }
 
 .woodenLogDIVAnimation {
     animation-name: woodenLogShow;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-iteration-count: 1;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
@@ -522,7 +531,7 @@ body {
     bottom: 23vw;
     left: 21vw;
     z-index: 130;
-    rotate: 35deg;
+    rotate: 30deg;
 } 
 
 #snake {
@@ -538,7 +547,7 @@ body {
 #tiger {
     display: none;
     position: fixed;
-    width: 35vw;
+    width: 50vw;
     bottom: 30vw;
     left: -50vw;
     z-index: 128;
@@ -546,8 +555,8 @@ body {
 
 .tigerAnimation {
     animation-name: tigerWalks;
-    animation-duration: 8s;
-    animation-iteration-count: 1;
+    animation-duration: 14s;
+    animation-iteration-count: 2;
     animation-timing-function: linear;
 }
 
@@ -566,7 +575,7 @@ body {
 #monkey {
     display: none;
     position: fixed;
-    width: 30vw;
+    width: 35vw;
     top: -150vw;
     left: 0;
     z-index: 135;
@@ -586,17 +595,35 @@ body {
         left: 0;
     }
     100% {
-        top: 0vw;
+        top: 5vw;
         left: 0;
     }
 }
 
 
-#travolta {
+#elephant {
     display: none;
     position: fixed;
-    width: 30vw;
-    bottom: 50vw;
-    left: 70vw;
-    z-index: 135;
+    width: 50vw;
+    bottom: 40vw;
+    left: 150vw;
+    z-index: 129;
 } 
+
+.elephantAnimation {
+    animation-name: elephantWalks;
+    animation-duration: 12s;
+    animation-iteration-count: 2;
+    animation-timing-function: linear;
+}
+
+@keyframes elephantWalks {
+    0% {
+        bottom: 40vw;
+        left: 150vw;
+    }
+    100% {
+        bottom: 30vw;
+        left: -50vw;
+    }
+}
