@@ -91,14 +91,14 @@ function dropBigFace() {
 //LAPTOP TYPING EFFECT
 function typeWriterEffect() {
     const text1 = "Hello World! My name is Lukasz and I created this website. From scratch. Using only raw HTML/CSS/JS (no libraries nor frameworks).";
-    const text2 = "This webpage doesn\’t serve any particular purpose. I created it for fun… improving my coding skills by the way.";
+    const text2 = "This webpage doesn\’t serve any particular purpose. I created it for fun! Improving my coding skills by the way.";
     const text3 = "As you have surely noticed by now, this page contains some bugs… Well I\’m still learning the very basics of web development.";
     const text4 = "Bugs are bugging me in Thailand where I currently live. I have to deal with bugs in my bungalow and bugs in my code.";
     const text5 = "Fortunately, I can control all the creatures on my page. I\’m the puppet master here, they will do as I say!";
     const text6 = "Don\’t you believe me? Check this out…"; 
     const text7 = "The cockroach walking on the left - I will make it stop with my magic code-spell: !COCKROACH FREEZE!"; 
     const text8 = "OK, now let's delete the cockroach and wash down the chameleon to free up some space in the jungle."; 
-    const text9 = "I will remove my laptop. Cheetah will be here to keep an eye on you. I will let you populate the jungle with the animals of your choice."; 
+    const text9 = "I will remove my laptop. Cheetah will be here to keep an eye on you. I will let you populate the jungle."; 
  
 
     function changeSentence(text) {
@@ -133,8 +133,8 @@ function typeWriterEffect() {
     setTimeout(changeSentence, text1.length*100 + 1000 + 5000 + text2.length*100 + 1000 + 5000 + text3.length*100 + 1000 + 5000 + text4.length*100 + 1000 + 5000 + text5.length*100 + 1000 + 5000 + text6.length*100 + 1000 + 2000 + text7.length*100 + 1000 + 8000, text8);
     setTimeout(deleteCockRoachWashDownChameleon, text1.length*100 + 1000 + 5000 + text2.length*100 + 1000 + 5000 + text3.length*100 + 1000 + 5000 + text4.length*100 + 1000 + 5000 + text5.length*100 + 1000 + 5000 + text6.length*100 + 1000 + 2000 + text7.length*100 + 1000 + 19000);
     setTimeout(changeSentence, text1.length*100 + 1000 + 5000 + text2.length*100 + 1000 + 5000 + text3.length*100 + 1000 + 5000 + text4.length*100 + 1000 + 5000 + text5.length*100 + 1000 + 5000 + text6.length*100 + 1000 + 2000 + text7.length*100 + 1000 + 8000 + text8.length*100 + 1000 + 5000, text9);
-    setTimeout(hideLaptopShowCheetah, text1.length*100 + 1000 + 5000 + text2.length*100 + 1000 + 5000 + text3.length*100 + 1000 + 5000 + text4.length*100 + 1000 + 5000 + text5.length*100 + 1000 + 5000 + text6.length*100 + 1000 + 2000 + text7.length*100 + 1000 + 8000 + text8.length*100 + 1000 + 5000 + text9.length*100 + 3000);
-    setTimeout(showBoards, text1.length*100 + 1000 + 5000 + text2.length*100 + 1000 + 5000 + text3.length*100 + 1000 + 5000 + text4.length*100 + 1000 + 5000 + text5.length*100 + 1000 + 5000 + text6.length*100 + 1000 + 2000 + text7.length*100 + 1000 + 8000 + text8.length*100 + 1000 + 5000 + text9.length*100 + 8000);
+    setTimeout(hideLaptopShowCheetah, text1.length*100 + 1000 + 5000 + text2.length*100 + 1000 + 5000 + text3.length*100 + 1000 + 5000 + text4.length*100 + 1000 + 5000 + text5.length*100 + 1000 + 5000 + text6.length*100 + 1000 + 2000 + text7.length*100 + 1000 + 8000 + text8.length*100 + 1000 + 5000 + text9.length*100 + 2000);
+    setTimeout(showBoards, text1.length*100 + 1000 + 5000 + text2.length*100 + 1000 + 5000 + text3.length*100 + 1000 + 5000 + text4.length*100 + 1000 + 5000 + text5.length*100 + 1000 + 5000 + text6.length*100 + 1000 + 2000 + text7.length*100 + 1000 + 8000 + text8.length*100 + 1000 + 5000 + text9.length*100 + 6000);
 
     function mosquitoFly() {
         document.getElementById("mosquitoGIF").className = "mosquitoAnimation";
@@ -204,8 +204,8 @@ function showBoardsHideRepopulate() {
         document.getElementById("monkey").style.display = "none";
         document.getElementById("monkey").className = "";
 
-        document.getElementById("travolta").style.display = "none";
-        document.getElementById("travolta").className = "";
+        document.getElementById("elephant").style.display = "none";
+        document.getElementById("elephant").className = "";
     }
 }
 
@@ -243,8 +243,9 @@ function populateJungle() {
         document.getElementById("monkey").style.display = "block";
         document.getElementById("monkey").className = "monkeyAnimation";
     }
-    if (document.getElementById("travoltaRADIO").checked) {
-        document.getElementById("travolta").style.display = "block";
+    if (document.getElementById("elephantRADIO").checked) {
+        document.getElementById("elephant").style.display = "block";
+        document.getElementById("elephant").className = "elephantAnimation";
     }
 }
 
