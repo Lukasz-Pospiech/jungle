@@ -11,9 +11,6 @@
     <!-- <link rel="icon" href="jok.png" type="image/x-icon" /> -->
     <script src="script.js"></script>
     <link rel="stylesheet" href="styles.css" />
-    <link href="http://fonts.cdnfonts.com/css/lets-coffee" rel="stylesheet">
-    <link href="http://fonts.cdnfonts.com/css/playsir" rel="stylesheet">
-    <link href="http://fonts.cdnfonts.com/css/chizz" rel="stylesheet">
 </head>
 
 <body onload="checkOrientation()">
@@ -35,7 +32,7 @@
         <img id="cheetahGIF" src="cheetah.gif" alt="cheetah">
         <div id="laptopContainer">
             <img id="laptopPic" src="laptopPic.jpg" alt="laptop"> 
-            <div id="laptopScreen" onclick="typeWriterEffect()">Tap here!</div>
+            <div id="laptopScreen" onclick="typeWriterEffect()"><p id="tapHere">TAP HERE!</p></div>
         </div>    
         <img id="bird" src="bird.gif">
         <img id="butterfly" src="butterfly.gif">
@@ -45,24 +42,24 @@
         <img id="snake" src="snake.gif">
         <img id="tiger" src="tiger.gif">
         <img id="monkey" src="monkey.png">
-        <img id="travolta" src="travolta.gif">
+        <img id="elephant" src="elephant.gif">
     </div>
 
     <div id="radioContainer">
             <div id="fliersDIV">
-                <label for="bird">Bird<input type="radio" id="birdRADIO" name="fliers" class="bigRadioButton"></label>
-                <label for="butterfly">Butterfly<input type="radio" id="butterflyRADIO" name="fliers" class="bigRadioButton"></label>
-                <label for="winnie">Winnie<input type="radio" id="winnieRADIO" name="fliers" class="bigRadioButton"></label>
+                <label for="birdRADIO">Bird<input type="radio" id="birdRADIO" name="fliers" class="bigRadioButton"></label>
+                <label for="butterflyRADIO">Butterfly<input type="radio" id="butterflyRADIO" name="fliers" class="bigRadioButton"></label>
+                <label for="winnieRADIO">Winnie<input type="radio" id="winnieRADIO" name="fliers" class="bigRadioButton"></label>
             </div>
             <div id="crawlersDIV">
-                <label for="lizard">Lizard<input type="radio" id="lizardRADIO" name="crawlers" class="bigRadioButton"></label>
-                <label for="crockodile">Crockodile<input type="radio" id="crockodileRADIO" name="crawlers" class="bigRadioButton"></label>
-                <label for="snake">Snake<input type="radio" id="snakeRADIO" name="crawlers" class="bigRadioButton"></label>
+                <label for="lizardRADIO">Lizard<input type="radio" id="lizardRADIO" name="crawlers" class="bigRadioButton"></label>
+                <label for="crockodileRADIO">Crockodile<input type="radio" id="crockodileRADIO" name="crawlers" class="bigRadioButton"></label>
+                <label for="snakeRADIO">Snake<input type="radio" id="snakeRADIO" name="crawlers" class="bigRadioButton"></label>
             </div>
             <div id="walkersDIV">
-                <label for="tiger">Tiger<input type="radio" id="tigerRADIO" name="walkers" class="bigRadioButton"></label>
-                <label for="monkey">Monkey<input type="radio" id="monkeyRADIO" name="walkers" class="bigRadioButton"></label> 
-                <label for="travolta">Travolta<input type="radio" id="travoltaRADIO" name="walkers" class="bigRadioButton"></label> 
+                <label for="tigerRADIO">Tiger<input type="radio" id="tigerRADIO" name="walkers" class="bigRadioButton"></label>
+                <label for="monkeyRADIO">Monkey<input type="radio" id="monkeyRADIO" name="walkers" class="bigRadioButton"></label> 
+                <label for="elephantRADIO">Elephant<input type="radio" id="elephantRADIO" name="walkers" class="bigRadioButton"></label> 
             </div>    
     </div>
     <div id="woodenLogDIV" onclick="populateJungle()"></div>
